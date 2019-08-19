@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en" ng-app="WepeApp">
   <head>
-    <title>{{ title }}</title>
+    <title>{{ caption }}</title>
   </head>
   <body>
-    <a href=''/>Home</a>
+    <a href='#!home'/>Home</a>
 		<a href='#!about'/>About</a>
 		<a href='#!testimonial'/>testimonial</a>
 
@@ -13,39 +13,5 @@
     <script type="text/javascript" src="./assets/vendor/angular/angular.min.js"></script>
     <script type="text/javascript" src="./assets/vendor/angular/angular-route.js"></script>
     <script type="text/javascript" src="./apps/apps.js"></script>
-    <script type="text/javascript" src="./apps/controllers/MainController.js"></script>
-    <script type="text/javascript">
-      /*angular.module('app', ['ngRoute']);
-
-      angular.config(function($routeProvider){
-      	$routeProvider
-      		.when('/', {
-      			caption 	: 'Welcome',
-      			controller 	: 'home',
-      			templateUrl	: 'views/home.html'
-      		})
-      		.when('/about', {
-      			caption 	: 'About Us',
-      			controller 	: 'about',
-      			templateUrl	: 'views/about.html'
-      		})
-      		.when('/testimonial', {
-      			caption 	: 'Testimonial',
-      			controller 	: 'testimonial',
-      			templateUrl	: 'views/testimonial.html'
-      		})
-      		.otherwise({ redirectTo : '/' });
-      });
-
-      angular.run(['$rootScope', function($rootScope){
-      	$rootScope.$on('$routeChangeSuccess', function(e, curr, prev){
-      		$rootScope.caption = curr.$$route.caption;
-      	})
-      }]);
-
-      angular.controller('home', function($scope){});
-      angular.controller('about', function($scope){});
-      angular.controller('testimonial', function($scope){});*/
-    </script>
   </body>
 </html>
