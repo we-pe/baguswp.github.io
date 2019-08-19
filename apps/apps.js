@@ -3,19 +3,22 @@ var	app = angular.module('WepeApp', ['ngRoute']);
 app.config(function($routeProvider){
   $routeProvider
     .when('/', {
-      caption 	: 'Welcome',
-      controller	:	'MainController',
-      templateUrl	: 'views/home.html'
+      caption : 'Welcome',
+      pages : 'home',
+      controller :	'MainController',
+      templateUrl : 'views/home.html'
     })
     .when('/about', {
-      caption 	: 'About Us',
-      controller	:	'MainController',
-      templateUrl	: 'views/about.html'
+      caption : 'About Us',
+      pages : 'about',
+      controller :	'MainController',
+      templateUrl : 'views/about.html'
     })
-    .when('/testimonial', {
-      caption 	: 'Testimonial',
-      controller	:	'MainController',
-      templateUrl	: 'views/testimonial.html'
+    .when('/contact', {
+      caption : 'Contact',
+      pages : 'contact',
+      controller :	'MainController',
+      templateUrl	: 'views/contact.html'
     })
     .otherwise({ redirectTo : '/' });
 });
@@ -25,5 +28,6 @@ app.controller('MainController', function($scope){});
 app.run(['$rootScope', function($rootScope){
 	$rootScope.$on('$routeChangeSuccess', function(e, curr, prev){
 		$rootScope.caption = curr.$$route.caption;
+    $rootScope.pages = curr.$$route.pages;
 	})
-}])
+}]);
